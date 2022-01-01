@@ -16,8 +16,7 @@
 //import com.example.karhabtifinal.data.AnnonceList
 //import tn.esprit.annoncerecyclerview.annonceList.AnnonceViewHolder
 //import java.util.*
-//
-//
+
 //class DetailsFragment : Fragment() {
 //    lateinit var pic: ImageView
 //    lateinit var titre: TextView
