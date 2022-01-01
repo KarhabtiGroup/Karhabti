@@ -47,7 +47,8 @@
 //
 //        /*     @RequiresApi(Build.VERSION_CODES.O)
 //        fun onBindViewHolder(holder: AnnonceViewHolder, position: Int) {
-//           // val edc = Annonce
+
+//                 val edc = Annonce
 //            holder.titre.text=edc.titre
 //            holder.description.text = edc.description
 //            holder.marque.text = edc.marque
