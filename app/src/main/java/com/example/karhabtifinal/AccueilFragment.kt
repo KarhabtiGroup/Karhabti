@@ -2,40 +2,28 @@ package com.example.karhabtifinal
 
 
 import android.graphics.Color
-import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
-import android.widget.*
-import androidx.fragment.app.FragmentTransaction
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
-import kotlin.random.Random
-import kotlin.random.Random.Default.nextInt
+import androidx.navigation.fragment.findNavController
+import kotlinx.android.synthetic.main.fragment_accueil.*
 
-class AccueilFragment : Fragment(), View.OnClickListener {
+class AccueilFragment : Fragment(R.layout.fragment_accueil) {
 
     var navController: NavController? = null
-    val pickImage = 100
-    var imageUri: Uri? = null
-    var stringUri: String = ""
     var arrayOfColors = arrayOf(Color.GREEN)
     var size = arrayOfColors.size
 
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,savedInstanceState: Bundle?): View? {
-
-        return inflater.inflate(R.layout.fragment_accueil, container, false)
-
-    }
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        lateinit var imageView: ImageView
-        navController= Navigation.findNavController(view)
-        view.findViewById<Button>(R.id.buttonSearch)
+        buttonSearch.setOnClickListener {
+            val action = AccueilFragmentDirections.accueilToAnnonce()
+            findNavController().navigate(action)
+        }
+     /*   view.findViewById<Button>(R.id.buttonSearch)
         val recherche = view.findViewById<Button>(R.id.buttonSearch)
         val voiture1 = view.findViewById<ImageView>(R.id.voiture1)
         val voiture2 = view.findViewById<ImageView>(R.id.voiture2)
@@ -114,13 +102,8 @@ class AccueilFragment : Fragment(), View.OnClickListener {
         recherche?.setOnClickListener {
 
         }
+*/
 
-    }
-    override fun onClick(v: View?)
-    {
-        when(v!!.id){
-            R.id.buttonSearch->navController!!.navigate(R.id.accueil_to_Annonce)
-        }
     }
 
 }

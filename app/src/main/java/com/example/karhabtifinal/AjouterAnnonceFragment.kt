@@ -274,6 +274,6 @@ class AjouterAnnonceFragment : Fragment() {
 
 
     fun initgo() {
-        (activity as MainActivity?)?.replacefragment(AnnoncesFragment())
+     //   (activity as MainActivity?)?.replacefragment(AnnoncesFragment())
     }
 }

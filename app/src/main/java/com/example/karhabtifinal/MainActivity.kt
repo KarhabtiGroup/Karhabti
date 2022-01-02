@@ -5,6 +5,8 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import com.example.karhabtifinal.Accounts.ProfileFragment
 import kotlinx.android.synthetic.main.bottom_navigation_bar.*
+import android.view.View
+import androidx.navigation.fragment.findNavController
 
 class MainActivity : AppCompatActivity() {
 
@@ -16,15 +18,15 @@ val mecanicienfragment =  MecanicienFragment()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        replacefragment(mecanicienfragment )
 
-        bottom_navigation.setOnNavigationItemSelectedListener{
+
+      //  replacefragment(mecanicienfragment )
+
+     /*   bottom_navigation.setOnNavigationItemSelectedListener{
             when(it.itemId){
                 R.id.ic_add->replacefragment(addfragment)
                 R.id.ic_home->replacefragment(homefragment)
                 R.id.ic_profile->replacefragment(profilefragment)
-
-
 
             }
             true
@@ -40,7 +42,7 @@ val mecanicienfragment =  MecanicienFragment()
             transaction.replace(R.id.fragmentContainerView,fragment)
             transaction.commit()
         }
-
+*/
     }
 
 
