@@ -1,6 +1,7 @@
 package com.example.karhabtifinal.network
 
 import com.example.karhabtifinal.data.AnnonceList
+import com.example.karhabtifinal.data.MecanicienList
 import com.google.gson.JsonObject
 import retrofit2.Call
 import retrofit2.http.Body
@@ -26,5 +27,13 @@ interface UserApi {
     @GET("api/Annonce/")
     fun AnnonceList(): Call<AnnonceList>
 
+    @POST("api/mecanicien/store")
+    fun store2(
+        @Body body:JsonObject
+    ): Call<JsonObject>
+
+
+    @GET("api/mecanicien/index/")
+    fun MecanicienList(): Call<MecanicienList>
 
 }

@@ -10,13 +10,13 @@ class MainActivity : AppCompatActivity() {
 
     val addfragment = AjouterAnnonceFragment()
     val annoncefragment = AnnoncesFragment()
-
+val mecanicienfragment =  MecanicienFragment()
     val homefragment = AccueilFragment()
     val profilefragment = ProfileFragment()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        replacefragment(homefragment )
+        replacefragment(mecanicienfragment )
 
         bottom_navigation.setOnNavigationItemSelectedListener{
             when(it.itemId){
