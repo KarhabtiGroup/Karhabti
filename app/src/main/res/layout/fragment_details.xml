@@ -7,7 +7,7 @@
     android:backgroundTint="#C3C3C3"
     android:clickable="true"
 
-    tools:context=".MainActivity"
+    tools:context=".DetailsFragment"
     android:focusable="true">
     <include
         android:id="@+id/includes"

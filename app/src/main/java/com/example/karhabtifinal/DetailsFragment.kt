@@ -1,23 +1,23 @@
-//package com.example.karhabtifinal
-//
-//import android.content.Context
-//import android.graphics.drawable.Drawable
-//import android.os.Build
-//import android.os.Bundle
-//import androidx.fragment.app.Fragment
-//import android.view.LayoutInflater
-//import android.view.View
-//import android.view.ViewGroup
-//import android.widget.ImageView
-//import android.widget.TextView
-//import androidx.annotation.RequiresApi
-//import com.bumptech.glide.Glide
-//import com.example.karhabtifinal.data.Annonce
-//import com.example.karhabtifinal.data.AnnonceList
-//import tn.esprit.annoncerecyclerview.annonceList.AnnonceViewHolder
-//import java.util.*
+package com.example.karhabtifinal
 
-//class DetailsFragment : Fragment() {
+import android.content.Context
+import android.graphics.drawable.Drawable
+import android.os.Build
+import android.os.Bundle
+import androidx.fragment.app.Fragment
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import android.widget.ImageView
+import android.widget.TextView
+import androidx.annotation.RequiresApi
+import com.bumptech.glide.Glide
+import com.example.karhabtifinal.data.Annonce
+import com.example.karhabtifinal.data.AnnonceList
+import tn.esprit.annoncerecyclerview.annonceList.AnnonceViewHolder
+import java.util.*
+
+class DetailsFragment : Fragment() {
 //    lateinit var pic: ImageView
 //    lateinit var titre: TextView
 //    lateinit var marque: TextView
@@ -62,4 +62,4 @@
 //        }*/
 //    }
 //
-//}
+}
