@@ -19,7 +19,7 @@ class ProfileFragment : Fragment(R.layout.fragment_profile) {
 
         buttonModifierProfile.setOnClickListener {
             val action= ProfileFragmentDirections.profileToModifierprofile()
-           // navigation.findNavController(view).navigate(action)
+            findNavController().navigate(action)
         }
     }
 
