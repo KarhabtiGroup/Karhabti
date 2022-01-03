@@ -11,7 +11,8 @@ import com.example.karhabtifinal.data.*
 import tn.esprit.annoncerecyclerview.mecanicienList.MecanicienViewHolder
 
 
-class MecanicienAdapter(val MecanicienList: MutableList<Mecanicien>) : RecyclerView.Adapter<MecanicienViewHolder>() {
+class MecanicienAdapter(val MecanicienList: MutableList<Mecanicien>) :
+    RecyclerView.Adapter<MecanicienViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MecanicienViewHolder {
         val view = LayoutInflater.from(parent.context)
@@ -35,7 +36,7 @@ class MecanicienAdapter(val MecanicienList: MutableList<Mecanicien>) : RecyclerV
         holder.phoneNumber.text = phoneNumber
 
 
-        holder.itemView.setOnClickListener{
+        holder.itemView.setOnClickListener {
             val intent = Intent(holder.itemView.context, MecanicienDetail::class.java)
             intent.apply {
 

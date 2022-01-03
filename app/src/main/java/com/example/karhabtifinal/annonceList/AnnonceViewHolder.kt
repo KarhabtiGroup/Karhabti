@@ -8,11 +8,10 @@ import com.example.karhabtifinal.R
 
 
 class AnnonceViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-    val pic : ImageView
-    val titre : TextView
-    val marque : TextView = itemView.findViewById<TextView>(R.id.marque)
-    val description : TextView = itemView.findViewById<TextView>(R.id.description)
-
+    val pic: ImageView
+    val titre: TextView
+    val marque: TextView = itemView.findViewById<TextView>(R.id.marque)
+    val description: TextView = itemView.findViewById<TextView>(R.id.description)
 
 
     init {

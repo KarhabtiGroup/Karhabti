@@ -14,6 +14,7 @@ import com.google.gson.JsonObject
 import com.google.gson.JsonParser
 import kotlinx.android.synthetic.main.fragment_ajouter_annonce.*
 import kotlinx.android.synthetic.main.fragment_ajouter_mecanicien.*
+import kotlinx.android.synthetic.main.fragment_mecanicien_detail.*
 import org.json.JSONObject
 import retrofit2.Call
 import retrofit2.Callback
@@ -30,8 +31,8 @@ class AjouterMecanicienFragment : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_ajouter_mecanicien, container, false)
         initAction()
-        val button= view?.findViewById<Button>(R.id.button)
-        button?.setOnClickListener{
+        val button = view?.findViewById<Button>(R.id.button)
+        button?.setOnClickListener {
 
 
             val name = name.text.toString().trim()
@@ -52,10 +53,10 @@ class AjouterMecanicienFragment : Fragment() {
     }
 
     fun initAction() {
-        val button= view?.findViewById<Button>(R.id.button)
+        val button = view?.findViewById<Button>(R.id.button)
         button?.setOnClickListener {
-            val name= name.text.toString().trim()
-            val adress= adress.text.toString().trim()
+            val name = name.text.toString().trim()
+            val adress = adress.text.toString().trim()
             val email = email.text.toString().trim()
             val phoneNumber = phoneNumber.text.toString().trim()
             val birthDate = birthDate.text.toString().trim()
@@ -94,7 +95,6 @@ class AjouterMecanicienFragment : Fragment() {
             }
         })
     }
-
 
 
     fun initgo() {

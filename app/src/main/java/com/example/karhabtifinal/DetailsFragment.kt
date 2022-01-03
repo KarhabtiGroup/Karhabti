@@ -28,7 +28,7 @@ class DetailsFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-     //   setContentView(R.layout.activity_detail)
+        //   setContentView(R.layout.activity_detail)
 
         fun loadImageToMovie(
             context: Context,
