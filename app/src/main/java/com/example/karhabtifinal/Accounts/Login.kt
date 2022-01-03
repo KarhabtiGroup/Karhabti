@@ -26,8 +26,6 @@ class Login : AppCompatActivity() {
     }
 
 
-
-
     fun initAction() {
         buttonSuiv.setOnClickListener {
             val Email = loginemail.text.toString().trim()
