@@ -27,7 +27,10 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>s
+        </activity>
+        <activity
+            android:name=".DetailActivity"
+            android:exported="true" />
         <activity
             android:name=".Accounts.Account4"
             android:exported="true" />

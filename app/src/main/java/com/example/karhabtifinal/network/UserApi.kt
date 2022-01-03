@@ -1,6 +1,7 @@
 package com.example.karhabtifinal.network
 
 import com.example.karhabtifinal.data.AnnonceList
+import com.example.karhabtifinal.data.InspectionList
 import com.example.karhabtifinal.data.MecanicienList
 import com.google.gson.JsonObject
 import retrofit2.Call
@@ -35,5 +36,10 @@ interface UserApi {
 
     @GET("api/mecanicien/index/")
     fun MecanicienList(): Call<MecanicienList>
+
+
+
+    @GET("api/inspection/index/")
+    fun InspectionList(): Call<InspectionList>
 
 }
