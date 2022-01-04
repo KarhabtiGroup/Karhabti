@@ -4,7 +4,7 @@ package com.example.karhabtifinal.data
 
 import androidx.annotation.DrawableRes
 
-
+//const val PICINSP = "PICTURE"
 const val MECANICIENINSP = "MECANICIEN"
 const val ANNONCEINSP = "ANNONCE"
 const val UTILISATEURINSP = "UTILISATEUR"

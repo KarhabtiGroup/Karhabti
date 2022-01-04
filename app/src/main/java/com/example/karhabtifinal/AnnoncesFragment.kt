@@ -58,7 +58,7 @@ class AnnoncesFragment : Fragment() {
             }
 
             override fun onFailure(call: retrofit2.Call<AnnonceList>, t: Throwable) {
-                TODO("Not yet implemented")
+                Log.e("Error", t.message.toString())
             }
 
         })

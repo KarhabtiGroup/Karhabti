@@ -13,11 +13,11 @@ class DetailInspection : AppCompatActivity() {
     //lateinit var pic : ImageView
     lateinit var annonce : TextView
     lateinit var utilisateur : TextView
-    lateinit var mecanicien : TextView
-    lateinit var moteur : TextView
-    lateinit var roues : TextView
-    lateinit var transmission : TextView
-    lateinit var historique : TextView
+   // lateinit var mecanicien : TextView
+  //  lateinit var moteur : TextView
+  //  lateinit var roues : TextView
+//    lateinit var transmission : TextView
+    //lateinit var historique : TextView
     lateinit var date : TextView
 
 
@@ -28,12 +28,12 @@ class DetailInspection : AppCompatActivity() {
 
        // pic = findViewById(R.id.pic2)
         annonce = findViewById(R.id.annonce)
-        transmission = findViewById(R.id.transmission)
-        mecanicien = findViewById(R.id.mecanicien)
+        //transmission = findViewById(R.id.transmission)
+       // mecanicien = findViewById(R.id.mecanicien)
         utilisateur = findViewById(R.id.utilisateur)
-        moteur = findViewById(R.id.moteur)
-        roues = findViewById(R.id.roues)
-        historique = findViewById(R.id.historique)
+       // moteur = findViewById(R.id.moteur)
+       // roues = findViewById(R.id.roues)
+        //historique = findViewById(R.id.historique)
         date = findViewById(R.id.date)
 
       //  pic.setImageResource(intent.getIntExtra(PICTUREINSP, 0))
@@ -54,12 +54,12 @@ class DetailInspection : AppCompatActivity() {
 
 
         annonce.text = "$annoncex"
-        transmission.text = "$transmissionx"
-        mecanicien.text = "$mecanicienx"
+      //  transmission.text = "$transmissionx"
+      //  mecanicien.text = "$mecanicienx"
         utilisateur.text = "$utilisateurx"
-        moteur.text = "$moteurx"
-        roues.text = "$rouesx"
-        historique.text = "$historiquex"
+     //   moteur.text = "$moteurx"
+      //  roues.text = "$rouesx"
+      //  historique.text = "$historiquex"
         date.text = "$datex"
 
     }
