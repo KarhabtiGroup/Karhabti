@@ -9,7 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.karhabtifinal.ListesAnnonceInspectionMecanicien.Annonce.AnnonceAdapter
+import com.example.karhabtifinal.ListesAnnonceInspectionMecanicien.Annonce.AnnoncesAdapter
 import com.example.karhabtifinal.R
 import com.example.karhabtifinal.data.Annonce.Annonce
 import com.example.karhabtifinal.data.Annonce.AnnonceList
@@ -22,7 +22,7 @@ class AnnoncesFragment : Fragment() {
 
 
     lateinit var recylcerAnnonce: RecyclerView
-    lateinit var recylcerAnnonceAdapter: AnnonceAdapter
+    lateinit var recylcerAnnoncesAdapter: AnnoncesAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -36,9 +36,9 @@ class AnnoncesFragment : Fragment() {
         recylcerAnnonce = view.findViewById(R.id.recyclerAnnonce)
         var annonceList: MutableList<Annonce> = ArrayList()
 
-        recylcerAnnonceAdapter = AnnonceAdapter(annonceList, requireContext())
+        recylcerAnnoncesAdapter = AnnoncesAdapter(annonceList, requireContext())
 
-        recylcerAnnonce.adapter = recylcerAnnonceAdapter
+        recylcerAnnonce.adapter = recylcerAnnoncesAdapter
 
         val retro = Retro().getRetroClientInstance().create(UserApi::class.java)
         retro.AnnonceList().enqueue(object : retrofit2.Callback<AnnonceList> {
@@ -47,7 +47,7 @@ class AnnoncesFragment : Fragment() {
                 response: Response<AnnonceList>
             ) {
                 response.body()?.annonce?.let { annonceList.addAll(it) }
-                recylcerAnnonceAdapter.notifyDataSetChanged()
+                recylcerAnnoncesAdapter.notifyDataSetChanged()
             }
 
             override fun onFailure(call: retrofit2.Call<AnnonceList>, t: Throwable) {
