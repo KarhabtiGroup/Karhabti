@@ -17,6 +17,9 @@
             android:name=".MecanicienDetail"
             android:exported="true" />
         <activity
+            android:name=".Inspections.DetailInspection"
+            android:exported="true" />
+        <activity
             android:name=".SplashScreenActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:exported="true"
