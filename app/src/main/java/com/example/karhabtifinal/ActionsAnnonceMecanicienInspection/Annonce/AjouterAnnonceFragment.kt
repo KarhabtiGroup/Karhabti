@@ -243,7 +243,6 @@ class AjouterAnnonceFragment : Fragment() {
         }
     }
 
-
     fun stores() {
         val paramObject2 = JSONObject()
         paramObject2.put("titre", Addtitre.text.toString().trim())
