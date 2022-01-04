@@ -2,7 +2,7 @@ const Utilisateur = require('../models/Utilisateur')
 const index=(req, res, next) => 
 {
     Utilisateur.find()
-    .then(reponse =>{
+    .then(response =>{
         res.json({
         response
          })
@@ -31,13 +31,22 @@ const show = (req, res, next) => {
 
 
 const store = (req, res, next) => {
+    
 
     let utilisateur= new Utilisateur({
         name:req.body.name,
         email:req.body.email,
+        password:req.body.password,
+        confirmPassword:req.body.confirmPassword,
         phoneNumber:req.body.phoneNumber,
-        birthDate:req.body.birthDate
+        birthDate:req.body.birthDate,
+        image:req.body.image
+
     })
+
+        
+    console.log(utilisateur)
+
     utilisateur.save()
     .then(response => {
         res.json({
@@ -59,8 +68,12 @@ const update =(req, res, next)=>
     let updateData={
         name:req.body.name,
         email:req.body.email,
+        password:req.body.password,
+        confirmPassword:req.body.confirmPassword,
         phoneNumber:req.body.phoneNumber,
-        birthDate:req.body.birthDate
+        birthDate:req.body.birthDate,
+        image:req.body.image
+
     }
     Utilisateur.findByIdAndUpdate(utilisateurID, {$set:updateData})
     .then(()=>{

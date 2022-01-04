@@ -2,7 +2,7 @@ const Mecanicien = require('../models/Mecanicien')
 const index=(req, res, next) => 
 {
     Mecanicien.find()
-    .then(reponse =>{
+    .then(response =>{
         res.json({
         response
          })

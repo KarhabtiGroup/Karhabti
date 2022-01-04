@@ -1,25 +1,22 @@
-const Utilisateur = require('../models/Utilisateur')
+const Annonce = require('../models/Annonce')
+
+
+//mrigl 
 const index=(req, res, next) => 
 {
-    Utilisateur.find()
-    .then(reponse =>{
-        res.json({
-        response
-         })
-    })
- .catch(error=>{
-     res.json({
-        error
-    })
- })   
+    Annonce.find()
+    .then((annonce) =>{res.json({annonce})})
+    .catch(error=>{res.json({error})})      
 }
 
+
+//mrigl 
 const show = (req, res, next) => {
-    let utilisateurID = req.body.utilisateurID
-     Utilisateur.findById(utilisateurID)
+    let AnnonceID = req.body.AnnonceID
+    Annonce.findById(AnnonceID)
     .then(reponse => {
         res.json({
-            reponse
+            response
         })
     })
     .catch(error => {
@@ -30,42 +27,61 @@ const show = (req, res, next) => {
 }
 
 
-const store = (req, res, next) => {
+//mrigl 
+const stores = (req, res, next) => {
+    
+        let annonce= new Annonce({
+            titre:req.body.titre,
+            marque:req.body.marque,
+            prix:req.body.prix,
+            date:req.body.date,
+            gouvernorat:req.body.gouvernorat,
+            delegation:req.body.delegation,
+            description:req.body.description,
+            image:req.body.image,
 
-    let utilisateur= new Utilisateur({
-        name:req.body.name,
-        email:req.body.email,
-        phoneNumber:req.body.phoneNumber,
-        birthDate:req.body.birthDate
-    })
-    utilisateur.save()
-    .then(response => {
+        })
+
+
+    /* if (req.file){
+            annonce.image=req.file.path
+        }*/
+       
+        annonce.save()
+        .then(response => {
+            res.json({
+                message:'Annonce Added Sucessfull!'
+            })
+        })
+    .catch(error => {
         res.json({
-            message:'Employee Added Sucessfull!'
+            message:'an error Occured here!'
         })
     })
-.catch(eroor => {
-    res.json({
-        message:'an error Occured!'
-    })
-})
-}
+    }
+    
 
 
-//update an utilisateur
+
+//mrigll
 const update =(req, res, next)=>
 {
-    let utilisateurID=req.body.utilisateurID
+    let AnnonceID=req.body.AnnonceID
     let updateData={
-        name:req.body.name,
-        email:req.body.email,
-        phoneNumber:req.body.phoneNumber,
-        birthDate:req.body.birthDate
+        titre:req.body.titre,
+        marque:req.body.marque,
+        prix:req.body.prix,
+        date:req.body.date,
+        gouvernorat:req.body.gouvernorat,
+        delegation:req.body.delegation,
+        description:req.body.description,       
+        image:req.body.image,
+        
     }
-    Utilisateur.findByIdAndUpdate(utilisateurID, {$set:updateData})
+    Annonce.findByIdAndUpdate(AnnonceID, {$set:updateData})
     .then(()=>{
         res.json( {
-            message:'Utilisateur updated successfully!'
+            message:'Annonce updated successfully!'
         })
     })
 .catch(error =>{
@@ -76,14 +92,13 @@ const update =(req, res, next)=>
 }
 
 
-//delete an utilisateur
-
+//mrigll
 const destory=(req,res,next) =>{
-    let utilisateurID= req.body.utilisateurID
-    Utilisateur.findByIdAndRemove(utilisateurID)
+    let AnnonceID= req.body.AnnonceID
+    Annonce.findByIdAndRemove(AnnonceID)
     .then(()=>{
         req.json({
-            message: 'an error Occured!'
+            message: 'Delete sucesse!'
         })
     })
     .catch(error =>{
@@ -94,6 +109,5 @@ const destory=(req,res,next) =>{
 }
 
 module.exports={
-    index,show,store,update,destory
-
+    index,show,stores,update,destory
 }

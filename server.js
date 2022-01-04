@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 
 const UtilisateurRoute=require('./routes/utilisateur')
 const AuthentificationRoute=require('./routes/authentification')
-const AnnonceRoute=require('./routes/annonce')
+const AnnonceRoute=require('./routes/Annonce')
 const MecanicienRoute=require('./routes/Mecanicien')
 const InspectionRoute=require('./routes/annonce')
 const TypeRoute=require('./routes/type')
@@ -28,19 +28,23 @@ const app = express();
 
 app.use(morgan('dev'))
 
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
 
+app.use(bodyParser.json({
+   limit: '50mb'
+}));
+app.use(bodyParser.urlencoded({
+   limit: '50mb',
+   extended: true
+}));
 const PORT = process.env.PORT || 3000
 
 app.listen(PORT, () => {
     console.log(`Server is running on port: ${PORT}`);
 });
-
+app.use('/api/Annonce', AnnonceRoute)
 app.use('/api/authentification', AuthentificationRoute)
 app.use('/api/utilisateur', UtilisateurRoute)
 app.use('/api/mecanicien', MecanicienRoute)
-//app.use('/api/annonce', AnnonceRoute)
 //app.use('/api/inspection', InspectionRoute)
 app.use('/api/type', TypeRoute)
 app.use('/api/sponsors', SponsorsRoute)

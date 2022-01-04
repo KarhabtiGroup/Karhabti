@@ -3,20 +3,29 @@ const Schema = mongoose.Schema;
 
 
 const annonceSchema = new Schema({
-    Title: {
+    titre: {
         type: String,
     },
-    Description: {
+    marque: {
         type: String,
     },
-    email: {
+    prix: {
         type: String,
     },
-    phoneNumber: {
+    date: {
         type: String,
     },
-    birthDate: {
-        type: Date,
+    gouvernorat: {
+        type: String,
+    },
+    delegation: {
+        type: String,
+    },
+    description: {
+        type: String,
+    },
+    image: {
+        type: String,
     },
 }, { timestamps: true});
 
