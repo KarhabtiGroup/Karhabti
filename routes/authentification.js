@@ -33,7 +33,7 @@ router.route('/register').post( async (req, res) => {
             };
 
 
-            // validation
+            // validation !!
 
 
             if(name === ""){
@@ -53,7 +53,10 @@ router.route('/register').post( async (req, res) => {
                 error.e = true;
             }
 
+
+
             if (password.length < 8){
+
                 error.password = "Enter a password of at least 8 characters.";
                 error.e = true;
             }
