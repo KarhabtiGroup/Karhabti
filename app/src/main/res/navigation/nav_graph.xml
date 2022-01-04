@@ -17,7 +17,7 @@
     </fragment>
     <fragment
         android:id="@+id/navigation_Annonce"
-        android:name="com.example.karhabtifinal.AjouterAnnonceFragment"
+        android:name="com.example.karhabtifinal.ActionsAnnonceMecanicienInspection.Annonce.AjouterAnnonceFragment"
         android:label="fragment_modifierannonce"
         tools:layout="@layout/fragment_modifierannonce" >
         <action
@@ -28,7 +28,7 @@
 
     <fragment
         android:id="@+id/navigation_profile"
-        android:name="com.example.karhabtifinal.ProfileFragment"
+        android:name="com.example.karhabtifinal.AccountsUtilisateurs.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" >
         <action
@@ -37,17 +37,17 @@
     </fragment>
     <fragment
         android:id="@+id/modifierprofileFragment"
-        android:name="com.example.karhabtifinal.Accounts.ModifierprofileFragment"
+        android:name="com.example.karhabtifinal.AccountsUtilisateurs.ModifierprofileFragment"
         android:label="fragment_modifierprofile"
         tools:layout="@layout/fragment_modifierprofile" />
     <fragment
         android:id="@+id/detailsFragment"
-        android:name="com.example.karhabtifinal.DetailsFragment"
+        android:name="com.example.karhabtifinal.ActionsAnnonceMecanicienInspection.Annonce.DetailsFragment"
         android:label="fragment_details"
         tools:layout="@layout/fragment_details" />
     <fragment
         android:id="@+id/annoncesFragment"
-        android:name="com.example.karhabtifinal.AnnoncesFragment"
+        android:name="com.example.karhabtifinal.ActionsAnnonceMecanicienInspection.Annonce.AnnoncesFragment"
         android:label="fragment_annonces"
         tools:layout="@layout/fragment_annonces" >
         <action
