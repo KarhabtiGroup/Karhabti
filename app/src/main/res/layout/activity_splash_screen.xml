@@ -4,9 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SplashScreenActivity"
     android:background="@color/white"
-    app:srcCompat="@drawable/splash1" >
+    app:srcCompat="@drawable/splash1"
+    tools:context=".SplashScreenActivity">
 
 
     <TextView

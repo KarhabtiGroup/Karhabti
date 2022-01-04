@@ -6,9 +6,8 @@
     android:layout_height="match_parent"
     android:backgroundTint="#C3C3C3"
     android:clickable="true"
-
-    tools:context=".AccueilFragment"
-    android:focusable="true">
+    android:focusable="true"
+    tools:context=".AccueilFragment">
 
 
     <ImageView
@@ -236,8 +235,8 @@
                                 android:id="@+id/voiture10"
                                 android:layout_width="60dp"
                                 android:layout_height="60dp"
-                                android:src="@drawable/van"/>
-                               // app:tint="#5089fa"
+                                android:src="@drawable/van" />
+                            // app:tint="#5089fa"
                         </androidx.cardview.widget.CardView>
 
                         <androidx.cardview.widget.CardView
@@ -315,10 +314,9 @@
                     android:textSize="13dp" />
 
 
-
                 <Spinner
-                    style="@style/Widget.AppCompat.Spinner.DropDown"
                     android:id="@+id/searchmarque"
+                    style="@style/Widget.AppCompat.Spinner.DropDown"
                     android:layout_width="185dp"
                     android:layout_height="41dp"
                     android:layout_alignParentTop="true"

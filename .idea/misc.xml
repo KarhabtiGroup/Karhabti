@@ -3,50 +3,44 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Desktop/School/Android/KarhabtiFinal/app/src/main/res/layout/activity_account.xml" value="0.1793478260869565" />
-        <entry key="..\:/Desktop/School/Android/KarhabtiFinal/app/src/main/res/layout/activity_account2.xml" value="0.1793478260869565" />
-        <entry key="..\:/Desktop/School/Android/KarhabtiFinal/app/src/main/res/layout/activity_account3.xml" value="0.1793478260869565" />
-        <entry key="..\:/Desktop/School/Android/KarhabtiFinal/app/src/main/res/layout/activity_account4.xml" value="0.1793478260869565" />
-        <entry key="..\:/Desktop/School/Android/KarhabtiFinal/app/src/main/res/layout/activity_detail.xml" value="0.29540229885057473" />
-        <entry key="..\:/Desktop/School/Android/KarhabtiFinal/app/src/main/res/layout/activity_main.xml" value="0.2" />
-        <entry key="..\:/Desktop/School/Android/KarhabtiFinal/app/src/main/res/layout/activity_splash_screen.xml" value="0.1793478260869565" />
-        <entry key="..\:/Desktop/School/Android/KarhabtiFinal/app/src/main/res/layout/annonce_single_item.xml" value="0.264" />
-        <entry key="..\:/Desktop/School/Android/KarhabtiFinal/app/src/main/res/layout/bottom_navigation_bar.xml" value="0.1598731884057971" />
-        <entry key="..\:/Desktop/School/Android/KarhabtiFinal/app/src/main/res/layout/fragment_ajouter_annonce.xml" value="0.16799999999999998" />
-        <entry key="..\:/Desktop/School/Android/KarhabtiFinal/app/src/main/res/layout/fragment_ajouter_annonce2.xml" value="0.13385416666666666" />
-        <entry key="..\:/Desktop/School/Android/KarhabtiFinal/app/src/main/res/layout/fragment_annonces.xml" value="0.1793478260869565" />
-        <entry key="..\:/Desktop/School/Android/KarhabtiFinal/app/src/main/res/layout/fragment_profile.xml" value="0.176" />
-        <entry key="..\:/Desktop/School/Android/KarhabtiFinal/app/src/main/res/layout/toolbar.xml" value="0.1793478260869565" />
-        <entry key="..\:/Desktop/School/Android/KarhabtiFinal/app/src/main/res/menu/menu.xml" value="0.259375" />
-        <entry key="..\:/Desktop/School/Android/Karhabtigit/app/src/main/res/layout/activity_detail_inspection.xml" value="0.2554671968190855" />
-        <entry key="..\:/Desktop/School/Android/Karhabtigit/app/src/main/res/layout/activity_main.xml" value="0.13385416666666666" />
-        <entry key="..\:/Desktop/School/Android/Karhabtigit/app/src/main/res/layout/activity_mecanicien_detail.xml" value="0.1" />
-        <entry key="..\:/Desktop/School/Android/Karhabtigit/app/src/main/res/layout/fragment_ajouter_mecanicien.xml" value="0.1" />
-        <entry key="..\:/Desktop/School/Android/Karhabtigit/app/src/main/res/layout/fragment_details.xml" value="0.254981884057971" />
-        <entry key="..\:/Desktop/School/Android/Karhabtigit/app/src/main/res/layout/fragment_inspection.xml" value="0.23229166666666667" />
-        <entry key="..\:/Desktop/School/Android/Karhabtigit/app/src/main/res/layout/fragment_mecanicien.xml" value="0.1" />
-        <entry key="..\:/Desktop/School/Android/Karhabtigit/app/src/main/res/layout/inspection_single_item.xml" value="0.13229166666666667" />
-        <entry key="..\:/Desktop/School/Android/Karhabtigit/app/src/main/res/layout/mecanicien_single_item.xml" value="0.1" />
-        <entry key="..\:/Desktop/School/Android/Karhabtigit/app/src/main/res/layout/toolbar.xml" value="0.152" />
-        <entry key="..\:/esprit 4.1/final/KarhabtiFinal/app/src/main/res/layout/activity_account.xml" value="0.1" />
-        <entry key="..\:/esprit 4.1/final/KarhabtiFinal/app/src/main/res/layout/activity_account2.xml" value="0.264" />
-        <entry key="..\:/esprit 4.1/final/KarhabtiFinal/app/src/main/res/layout/activity_account3.xml" value="0.2" />
-        <entry key="..\:/esprit 4.1/final/KarhabtiFinal/app/src/main/res/layout/activity_account4.xml" value="0.4" />
-        <entry key="..\:/esprit 4.1/final/KarhabtiFinal/app/src/main/res/layout/activity_detail.xml" value="0.264" />
-        <entry key="..\:/esprit 4.1/final/KarhabtiFinal/app/src/main/res/layout/activity_main.xml" value="0.24166666666666667" />
-        <entry key="..\:/esprit 4.1/final/KarhabtiFinal/app/src/main/res/layout/activity_splash_screen.xml" value="0.264" />
-        <entry key="..\:/esprit 4.1/final/KarhabtiFinal/app/src/main/res/layout/annonce_single_item.xml" value="0.264" />
-        <entry key="..\:/esprit 4.1/final/KarhabtiFinal/app/src/main/res/layout/bottom_navigation_bar.xml" value="0.24166666666666667" />
-        <entry key="..\:/esprit 4.1/final/KarhabtiFinal/app/src/main/res/layout/fragment_accueil.xml" value="0.24166666666666667" />
-        <entry key="..\:/esprit 4.1/final/KarhabtiFinal/app/src/main/res/layout/fragment_acuueil.xml" value="0.24166666666666667" />
-        <entry key="..\:/esprit 4.1/final/KarhabtiFinal/app/src/main/res/layout/fragment_ajouter_annonce.xml" value="0.3411290322580645" />
-        <entry key="..\:/esprit 4.1/final/KarhabtiFinal/app/src/main/res/layout/fragment_ajouter_annonce2.xml" value="0.22604166666666667" />
-        <entry key="..\:/esprit 4.1/final/KarhabtiFinal/app/src/main/res/layout/fragment_annonces.xml" value="0.22604166666666667" />
-        <entry key="..\:/esprit 4.1/final/KarhabtiFinal/app/src/main/res/layout/fragment_details.xml" value="0.22604166666666667" />
-        <entry key="..\:/esprit 4.1/final/KarhabtiFinal/app/src/main/res/layout/fragment_modifierannonce.xml" value="0.24166666666666667" />
-        <entry key="..\:/esprit 4.1/final/KarhabtiFinal/app/src/main/res/layout/fragment_modifierprofile.xml" value="0.24166666666666667" />
-        <entry key="..\:/esprit 4.1/final/KarhabtiFinal/app/src/main/res/layout/fragment_profile.xml" value="0.24166666666666667" />
-        <entry key="..\:/esprit 4.1/final/KarhabtiFinal/app/src/main/res/layout/toolbar.xml" value="0.4027640671273445" />
+        <entry key="..\:/esprit 4.2/KarhabtiFinal/app/src/main/res/drawable-v24/ic_baseline_add_24.xml" value="0.1787037037037037" />
+        <entry key="..\:/esprit 4.2/KarhabtiFinal/app/src/main/res/drawable-v24/ic_baseline_home_24.xml" value="0.1787037037037037" />
+        <entry key="..\:/esprit 4.2/KarhabtiFinal/app/src/main/res/drawable-v24/ic_baseline_person_24.xml" value="0.1787037037037037" />
+        <entry key="..\:/esprit 4.2/KarhabtiFinal/app/src/main/res/drawable-v24/ic_baseline_search_24.xml" value="0.1787037037037037" />
+        <entry key="..\:/esprit 4.2/KarhabtiFinal/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.21666666666666667" />
+        <entry key="..\:/esprit 4.2/KarhabtiFinal/app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.12916666666666668" />
+        <entry key="..\:/esprit 4.2/KarhabtiFinal/app/src/main/res/drawable/ic_dashboard_black_24dp.xml" value="0.21666666666666667" />
+        <entry key="..\:/esprit 4.2/KarhabtiFinal/app/src/main/res/drawable/ic_home_black_24dp.xml" value="0.21666666666666667" />
+        <entry key="..\:/esprit 4.2/KarhabtiFinal/app/src/main/res/drawable/ic_launcher_background.xml" value="0.21666666666666667" />
+        <entry key="..\:/esprit 4.2/KarhabtiFinal/app/src/main/res/drawable/ic_notifications_black_24dp.xml" value="0.21666666666666667" />
+        <entry key="..\:/esprit 4.2/KarhabtiFinal/app/src/main/res/layout/activity_account.xml" value="0.1" />
+        <entry key="..\:/esprit 4.2/KarhabtiFinal/app/src/main/res/layout/activity_account2.xml" value="0.1" />
+        <entry key="..\:/esprit 4.2/KarhabtiFinal/app/src/main/res/layout/activity_account4.xml" value="0.1" />
+        <entry key="..\:/esprit 4.2/KarhabtiFinal/app/src/main/res/layout/activity_choisirloginsignup.xml" value="0.24166666666666667" />
+        <entry key="..\:/esprit 4.2/KarhabtiFinal/app/src/main/res/layout/activity_login.xml" value="0.17864583333333334" />
+        <entry key="..\:/esprit 4.2/KarhabtiFinal/app/src/main/res/layout/activity_main.xml" value="0.4" />
+        <entry key="..\:/esprit 4.2/KarhabtiFinal/app/src/main/res/layout/activity_signup.xml" value="0.17864583333333334" />
+        <entry key="..\:/esprit 4.2/KarhabtiFinal/app/src/main/res/layout/activity_splash_screen.xml" value="0.1" />
+        <entry key="..\:/esprit 4.2/KarhabtiFinal/app/src/main/res/layout/annonce_single_item.xml" value="0.11927083333333334" />
+        <entry key="..\:/esprit 4.2/KarhabtiFinal/app/src/main/res/layout/bottom_navigation_bar.xml" value="0.1" />
+        <entry key="..\:/esprit 4.2/KarhabtiFinal/app/src/main/res/layout/fragment_accueil.xml" value="0.1" />
+        <entry key="..\:/esprit 4.2/KarhabtiFinal/app/src/main/res/layout/fragment_ajouter_annonce.xml" value="0.4" />
+        <entry key="..\:/esprit 4.2/KarhabtiFinal/app/src/main/res/layout/fragment_ajouter_mecanicien.xml" value="0.17864583333333334" />
+        <entry key="..\:/esprit 4.2/KarhabtiFinal/app/src/main/res/layout/fragment_annonces.xml" value="0.1" />
+        <entry key="..\:/esprit 4.2/KarhabtiFinal/app/src/main/res/layout/fragment_dashboard.xml" value="0.24166666666666667" />
+        <entry key="..\:/esprit 4.2/KarhabtiFinal/app/src/main/res/layout/fragment_details.xml" value="0.1" />
+        <entry key="..\:/esprit 4.2/KarhabtiFinal/app/src/main/res/layout/fragment_home.xml" value="0.17864583333333334" />
+        <entry key="..\:/esprit 4.2/KarhabtiFinal/app/src/main/res/layout/fragment_mecanicien.xml" value="0.1" />
+        <entry key="..\:/esprit 4.2/KarhabtiFinal/app/src/main/res/layout/fragment_mecanicien_detail.xml" value="0.1" />
+        <entry key="..\:/esprit 4.2/KarhabtiFinal/app/src/main/res/layout/fragment_modifierannonce.xml" value="0.1" />
+        <entry key="..\:/esprit 4.2/KarhabtiFinal/app/src/main/res/layout/fragment_modifierprofile.xml" value="0.18499573742540495" />
+        <entry key="..\:/esprit 4.2/KarhabtiFinal/app/src/main/res/layout/fragment_notifications.xml" value="0.1" />
+        <entry key="..\:/esprit 4.2/KarhabtiFinal/app/src/main/res/layout/fragment_profile.xml" value="0.264" />
+        <entry key="..\:/esprit 4.2/KarhabtiFinal/app/src/main/res/layout/fragment_profile_user.xml" value="0.22604166666666667" />
+        <entry key="..\:/esprit 4.2/KarhabtiFinal/app/src/main/res/layout/mecanicien_single_item.xml" value="0.1" />
+        <entry key="..\:/esprit 4.2/KarhabtiFinal/app/src/main/res/layout/toolbar.xml" value="0.1" />
+        <entry key="..\:/esprit 4.2/KarhabtiFinal/app/src/main/res/menu/bottom_nav_menu.xml" value="0.1" />
+        <entry key="..\:/esprit 4.2/KarhabtiFinal/app/src/main/res/menu/menu.xml" value="0.24166666666666667" />
       </map>
     </option>
   </component>

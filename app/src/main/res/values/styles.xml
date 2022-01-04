@@ -1,6 +1,6 @@
 <resources>
 
-    <style name="Widget.Theme.KarhabtiFinal.ActionBar.Fullscreen" parent="Widget.AppCompat.ActionBar">
+    <style name="Widget.Theme.KarhabtiFinal.ActionBar.Fullscreen" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="android:background">@color/black_overlay</item>
     </style>
 

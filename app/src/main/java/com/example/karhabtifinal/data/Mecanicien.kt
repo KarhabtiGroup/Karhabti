@@ -1,7 +1,6 @@
 package com.example.karhabtifinal.data
 
 
-
 import androidx.annotation.DrawableRes
 
 const val PIC = "PIC"
@@ -12,7 +11,6 @@ const val PHONENUMBER = "PHONENUMBER"
 const val BIRTHDATE = "BIRTHDATE"
 
 data class Mecanicien(
-
 
 
     val name: String,

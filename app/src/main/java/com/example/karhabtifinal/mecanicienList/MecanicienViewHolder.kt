@@ -9,10 +9,9 @@ import com.example.karhabtifinal.R
 
 class MecanicienViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-    val name : TextView
-    val adress : TextView = itemView.findViewById<TextView>(R.id.adress)
-    val phoneNumber : TextView = itemView.findViewById<TextView>(R.id.phoneNumber)
-
+    val name: TextView
+    val adress: TextView = itemView.findViewById<TextView>(R.id.adress)
+    val phoneNumber: TextView = itemView.findViewById<TextView>(R.id.phoneNumber)
 
 
     init {

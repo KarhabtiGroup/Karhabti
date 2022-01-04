@@ -1,7 +1,6 @@
 package com.example.karhabtifinal
 
 
-
 import android.os.Bundle
 import android.telecom.Call
 import android.util.Log
@@ -26,30 +25,30 @@ import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.Retrofit
 
 
-
-
-
 class AnnoncesFragment : Fragment() {
 
 
     lateinit var recylcerAnnonce: RecyclerView
     lateinit var recylcerAnnonceAdapter: AnnonceAdapter
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View?
-    {
-        val view=inflater.inflate(R.layout.fragment_annonces,container,false)
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        val view = inflater.inflate(R.layout.fragment_annonces, container, false)
 
 
 
         recylcerAnnonce = view.findViewById(R.id.recyclerAnnonce)
-        var annonceList : MutableList<Annonce> = ArrayList()
+        var annonceList: MutableList<Annonce> = ArrayList()
 
-        recylcerAnnonceAdapter = AnnonceAdapter(annonceList,requireContext())
+        recylcerAnnonceAdapter = AnnonceAdapter(annonceList, requireContext())
 
         recylcerAnnonce.adapter = recylcerAnnonceAdapter
 
         val retro = Retro().getRetroClientInstance().create(UserApi::class.java)
-        retro.AnnonceList().enqueue(object: retrofit2.Callback<AnnonceList> {
+        retro.AnnonceList().enqueue(object : retrofit2.Callback<AnnonceList> {
             override fun onResponse(
                 call: retrofit2.Call<AnnonceList>,
                 response: Response<AnnonceList>
@@ -64,17 +63,18 @@ class AnnoncesFragment : Fragment() {
 
         })
 
-        recylcerAnnonce.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL ,false)
+        recylcerAnnonce.layoutManager =
+            LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
         return view
 
 
+    }
+}
 
-    }}
-
-    //private fun doList() {
-      //  var annonceliste : MutableList<Annonce> = ArrayList()
-    //   val retro = Retro().getRetroClientInstance().create(UserApi::class.java)
-   //     retro.AnnonceList().enqueue(object : Callback<AnnonceList> {
+//private fun doList() {
+//  var annonceliste : MutableList<Annonce> = ArrayList()
+//   val retro = Retro().getRetroClientInstance().create(UserApi::class.java)
+//     retro.AnnonceList().enqueue(object : Callback<AnnonceList> {
 //
 //       //     override fun onResponse(call: Call<AnnonceList>, response: Response<AnnonceList>) {
 //                Toast.makeText(context, "Liste in ", Toast.LENGTH_SHORT).show()

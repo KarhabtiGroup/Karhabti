@@ -1,8 +1,6 @@
 package com.example.karhabtifinal.data
 
 
-
-
 //const val PICTURE = "PICTURE"
 //const val TITRE = "TITRE"
 //const val MARQUE = "MARQUE"
@@ -12,7 +10,7 @@ package com.example.karhabtifinal.data
 
 data class Annonce(
 
-    val image:String,
+    val image: String,
 
     val titre: String,
 

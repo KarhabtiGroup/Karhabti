@@ -1,119 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".AjouterMecanicienFragment">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="0dp"
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/splash3"
-        tools:layout_editor_absoluteY="16dp" />
-    <LinearLayout
-        android:id="@+id/linearLayout2"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="53dp"
-        android:layout_marginBottom="53dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:orientation="vertical">
+        android:text="@string/hello_blank_fragment" />
 
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/name"
-            android:layout_width="311dp"
-            android:layout_height="49dp"
-            android:layout_marginLeft="50dp"
-            android:layout_marginBottom="20dp"
-            android:background="#FFFFFF"
-            android:hint="    Name"
-
-            android:textColor="#000000"
-
-            tools:ignore="TouchTargetSizeCheck" />
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/adress"
-            android:layout_width="311dp"
-            android:layout_height="49dp"
-            android:layout_marginLeft="50dp"
-            android:layout_marginBottom="20dp"
-            android:background="#FFFFFF"
-            android:hint="Adress"
-
-            android:textColor="#000000"
-
-            tools:ignore="TouchTargetSizeCheck" />
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/email"
-            android:layout_width="311dp"
-            android:layout_height="49dp"
-            android:layout_marginLeft="50dp"
-            android:layout_marginBottom="20dp"
-            android:background="#FFFFFF"
-            android:hint="Email"
-
-            android:textColor="#000000"
-
-            tools:ignore="TouchTargetSizeCheck" />
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/phoneNumber"
-            android:layout_width="311dp"
-            android:layout_height="49dp"
-            android:layout_marginLeft="50dp"
-            android:layout_marginBottom="20dp"
-            android:background="#FFFFFF"
-            android:hint="Phone number"
-
-            android:textColor="#000000"
-            app:layout_constraintBottom_toTopOf="@+id/button"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            tools:ignore="TouchTargetSizeCheck" />
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/birthDate"
-            android:layout_width="311dp"
-            android:layout_height="49dp"
-            android:layout_marginLeft="50dp"
-            android:layout_marginBottom="50dp"
-            android:background="#FFFFFF"
-            android:hint="Birth date"
-
-            android:textColor="#000000"
-            app:layout_constraintBottom_toTopOf="@+id/button"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            tools:ignore="TouchTargetSizeCheck" />
-
-
-
-        <Button
-            android:id="@+id/button"
-            android:layout_width="177dp"
-            android:layout_height="50dp"
-
-            android:fontFamily="@font/arial"
-            android:letterSpacing="0.2"
-            android:text="Ajouter"
-            android:textAllCaps="false"
-            android:textColor="@color/white"
-
-            android:layout_marginLeft="115dp"
-
-            />
-
-    </LinearLayout>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

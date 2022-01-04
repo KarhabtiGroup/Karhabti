@@ -3,10 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/accueilFragment">
+    app:startDestination="@id/navigation_home">
+
 
     <fragment
-        android:id="@+id/accueilFragment"
+        android:id="@+id/navigation_home"
         android:name="com.example.karhabtifinal.AccueilFragment"
         android:label="fragment_accueil"
         tools:layout="@layout/fragment_accueil" >
@@ -15,7 +16,7 @@
             app:destination="@id/annoncesFragment" />
     </fragment>
     <fragment
-        android:id="@+id/ajouterAnnonceFragment"
+        android:id="@+id/navigation_Annonce"
         android:name="com.example.karhabtifinal.AjouterAnnonceFragment"
         android:label="fragment_modifierannonce"
         tools:layout="@layout/fragment_modifierannonce" >
@@ -23,9 +24,11 @@
             android:id="@+id/ajouterAnnonce_to_annonces"
             app:destination="@id/annoncesFragment" />
     </fragment>
+
+
     <fragment
-        android:id="@+id/profileFragment"
-        android:name="com.example.karhabtifinal.Accounts.ProfileFragment"
+        android:id="@+id/navigation_profile"
+        android:name="com.example.karhabtifinal.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" >
         <action

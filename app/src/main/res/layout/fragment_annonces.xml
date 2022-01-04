@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".AnnoncesFragment">
 
-<androidx.recyclerview.widget.RecyclerView
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerAnnonce"
         android:layout_width="415dp"
         android:layout_height="728dp"

@@ -11,34 +11,31 @@ import com.example.karhabtifinal.network.Retro
 import com.example.karhabtifinal.network.UserApi
 import com.google.gson.JsonObject
 import com.google.gson.JsonParser
-import kotlinx.android.synthetic.main.activity_account2.*
+import kotlinx.android.synthetic.main.activity_login.*
 import org.json.JSONObject
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
 
-class Account2 : AppCompatActivity()
-    {
-    override fun onCreate(savedInstanceState: Bundle?)
-    {
+class Login : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_account2)
+        setContentView(R.layout.activity_login)
         initAction()
     }
 
+
     fun initAction() {
-        buttonSuiv.setOnClickListener{
+        buttonSuiv.setOnClickListener {
             val Email = loginemail.text.toString().trim()
             val mdp = loginpassw.text.toString().trim()
-            if (Email.isEmpty())
-            {
+            if (Email.isEmpty()) {
                 loginemail.error = "Email vide!"
                 loginemail.requestFocus()
                 return@setOnClickListener
             }
-            if (mdp.isEmpty())
-            {
+            if (mdp.isEmpty()) {
                 loginpassw.error = "Mot de passe vide!"
                 loginpassw.requestFocus()
                 return@setOnClickListener
@@ -47,8 +44,7 @@ class Account2 : AppCompatActivity()
         }
     }
 
-    fun login()
-    {
+    fun login() {
         val paramObject1 = JSONObject()
         paramObject1.put("email", loginemail.text.toString().trim())
         paramObject1.put("password", loginpassw.text.toString().trim())
@@ -58,30 +54,28 @@ class Account2 : AppCompatActivity()
 
         retro.login(gsonObject1).enqueue(object : Callback<JsonObject> {
             override fun onResponse(call: Call<JsonObject>, response: Response<JsonObject>) {
-                if(response.code()==200)
-                {
+                if (response.code() == 200) {
                     initgo()
                     Toast.makeText(applicationContext, "go", Toast.LENGTH_SHORT).show()
-                }
-                else
-                {
+                } else {
                     Toast.makeText(applicationContext, "we can't sorry", Toast.LENGTH_SHORT).show()
                 }
             }
-            override fun onFailure(call: Call<JsonObject>, t: Throwable)
-            {
+
+            override fun onFailure(call: Call<JsonObject>, t: Throwable) {
                 Log.e("Error", t.message.toString())
             }
         })
     }
 
 
-    fun initgo()
-        {
+    fun initgo() {
         val intent = Intent(this, MainActivity::class.java).apply { }
         startActivity(intent)
-        }
+    }
 }
+
+
 //        val request = UserRequest()
 //       request.email = loginemail.text.toString().trim()
 //       request.password= loginpassw.text.toString().trim()

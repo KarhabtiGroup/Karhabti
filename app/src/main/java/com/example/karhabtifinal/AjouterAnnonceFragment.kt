@@ -58,7 +58,7 @@ class AjouterAnnonceFragment : Fragment() {
         }
 
         initAction()
-        val button= view?.findViewById<Button>(R.id.Addbutton)
+        val button = view?.findViewById<Button>(R.id.Addbutton)
         button?.setOnClickListener {
             val titre = Addtitre.text.toString().trim()
             val marque = Addmarque.text.toString().trim()
@@ -78,33 +78,33 @@ class AjouterAnnonceFragment : Fragment() {
                 Addtitre.requestFocus()
                 return@setOnClickListener
             }
-            if(marque.isEmpty()){
-                Addmarque.error="Email vide!"
+            if (marque.isEmpty()) {
+                Addmarque.error = "Email vide!"
                 Addmarque.requestFocus()
                 return@setOnClickListener
             }
-            if(prix.isEmpty()){
-                Addprix.error="Prix vide!"
+            if (prix.isEmpty()) {
+                Addprix.error = "Prix vide!"
                 Addprix.requestFocus()
                 return@setOnClickListener
             }
-            if(date.isEmpty()){
-                Adddate.error="Date vide!"
+            if (date.isEmpty()) {
+                Adddate.error = "Date vide!"
                 Adddate.requestFocus()
                 return@setOnClickListener
             }
-            if(gouvernorat.isEmpty()){
-                Addgouvernorat.error="Gouvernorat vide!"
+            if (gouvernorat.isEmpty()) {
+                Addgouvernorat.error = "Gouvernorat vide!"
                 Addgouvernorat.requestFocus()
                 return@setOnClickListener
             }
-            if(delegation.isEmpty()){
-                Adddelegation.error="Delegation vide!"
+            if (delegation.isEmpty()) {
+                Adddelegation.error = "Delegation vide!"
                 Adddelegation.requestFocus()
                 return@setOnClickListener
             }
-            if(description.isEmpty()){
-                Adddescription.error="Description vide!"
+            if (description.isEmpty()) {
+                Adddescription.error = "Description vide!"
                 Adddescription.requestFocus()
                 return@setOnClickListener
             }
@@ -118,6 +118,7 @@ class AjouterAnnonceFragment : Fragment() {
         return view
 
     }
+
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
@@ -156,7 +157,7 @@ class AjouterAnnonceFragment : Fragment() {
         baos.flush();
         baos.close();
         baos.close();
-        return  baos.toByteArray()
+        return baos.toByteArray()
     }
 
     fun drawableToBitmap(drawable: Drawable): Bitmap {
@@ -186,8 +187,9 @@ class AjouterAnnonceFragment : Fragment() {
         drawable.draw(canvas)
         return bitmap
     }
+
     fun initAction() {
-        val button= view?.findViewById<Button>(R.id.Addbutton)
+        val button = view?.findViewById<Button>(R.id.Addbutton)
         button?.setOnClickListener {
             val titre = Addtitre.text.toString().trim()
             val marque = Addmarque.text.toString().trim()
@@ -203,36 +205,36 @@ class AjouterAnnonceFragment : Fragment() {
                 Addtitre.requestFocus()
                 return@setOnClickListener
             }
-               if(marque.isEmpty()){
-                   Addmarque.error="Email vide!"
-                   Addmarque.requestFocus()
-                       return@setOnClickListener
-                   }
-                   if(prix.isEmpty()){
-                       Addprix.error="Prix vide!"
-                       Addprix.requestFocus()
-                       return@setOnClickListener
-                   }
-                   if(date.isEmpty()){
-                       Adddate.error="Date vide!"
-                       Adddate.requestFocus()
-                       return@setOnClickListener
-                   }
-                   if(gouvernorat.isEmpty()){
-                       Addgouvernorat.error="Gouvernorat vide!"
-                       Addgouvernorat.requestFocus()
-                       return@setOnClickListener
-                   }
-                   if(delegation.isEmpty()){
-                       Adddelegation.error="Delegation vide!"
-                       Adddelegation.requestFocus()
-                       return@setOnClickListener
-                   }
-                  if(description.isEmpty()){
-                      Adddescription.error="Description vide!"
-                      Adddescription.requestFocus()
-                      return@setOnClickListener
-                  }
+            if (marque.isEmpty()) {
+                Addmarque.error = "Email vide!"
+                Addmarque.requestFocus()
+                return@setOnClickListener
+            }
+            if (prix.isEmpty()) {
+                Addprix.error = "Prix vide!"
+                Addprix.requestFocus()
+                return@setOnClickListener
+            }
+            if (date.isEmpty()) {
+                Adddate.error = "Date vide!"
+                Adddate.requestFocus()
+                return@setOnClickListener
+            }
+            if (gouvernorat.isEmpty()) {
+                Addgouvernorat.error = "Gouvernorat vide!"
+                Addgouvernorat.requestFocus()
+                return@setOnClickListener
+            }
+            if (delegation.isEmpty()) {
+                Adddelegation.error = "Delegation vide!"
+                Adddelegation.requestFocus()
+                return@setOnClickListener
+            }
+            if (description.isEmpty()) {
+                Adddescription.error = "Description vide!"
+                Adddescription.requestFocus()
+                return@setOnClickListener
+            }
 //                if(image.isEmpty()){
 //                    Addimage.c="Date de naissance vide!"
 //                    Addimage.requestFocus()
@@ -262,7 +264,7 @@ class AjouterAnnonceFragment : Fragment() {
         retro.stores(gsonObject1).enqueue(object : Callback<JsonObject> {
             override fun onResponse(call: Call<JsonObject>, response: Response<JsonObject>) {
                 initgo()
-                Toast.makeText(context,"Success", Toast.LENGTH_LONG).show()
+                Toast.makeText(context, "Success", Toast.LENGTH_LONG).show()
 
             }
 
@@ -274,6 +276,6 @@ class AjouterAnnonceFragment : Fragment() {
 
 
     fun initgo() {
-     //   (activity as MainActivity?)?.replacefragment(AnnoncesFragment())
+        //   (activity as MainActivity?)?.replacefragment(AnnoncesFragment())
     }
 }
