@@ -33,7 +33,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:id="@+id/imageView4"
+            android:id="@+id/userimage"
             android:layout_width="192dp"
             android:layout_height="188dp"
             android:layout_gravity="center"
@@ -58,7 +58,7 @@
                 android:padding="16dp">
 
                 <TextView
-                    android:id="@+id/titre"
+                    android:id="@+id/usernom"
                     android:layout_width="243dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -73,7 +73,7 @@
                     tools:ignore="RtlCompat" />
 
                 <TextView
-                    android:id="@+id/numero"
+                    android:id="@+id/usernumero"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -84,7 +84,7 @@
                     android:textColor="?android:attr/textColorSecondary" />
 
                 <TextView
-                    android:id="@+id/email"
+                    android:id="@+id/useremail"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -95,7 +95,7 @@
                     android:textColor="?android:attr/textColorSecondary" />
 
                 <TextView
-                    android:id="@+id/date"
+                    android:id="@+id/userdate"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"

@@ -12,6 +12,8 @@ data class User(
 
     val phoneNumber: String,
 
-    val birthDate: String
+    val birthDate: String,
+
+    val image: String
 
 )

@@ -22,12 +22,7 @@ class MecanicienDetail : AppCompatActivity() {
         setContentView(R.layout.fragment_mecanicien_detail)
 
 
-        pic = findViewById(R.id.pic2)
-        name = findViewById(R.id.name)
-        adress = findViewById(R.id.adress)
-        email = findViewById(R.id.email)
-        phoneNumber = findViewById(R.id.phoneNumber)
-        birthDate = findViewById(R.id.birthDate)
+
 
         pic.setImageResource(intent.getIntExtra(PIC, 0))
 
