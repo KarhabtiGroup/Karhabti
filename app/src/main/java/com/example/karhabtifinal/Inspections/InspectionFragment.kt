@@ -41,20 +41,20 @@ class InspectionFragment : Fragment() {
         recylcerInspection.adapter = recylcerInspectionAdapter
 
         val retro = Retro().getRetroClientInstance().create(UserApi::class.java)
-        retro.InspectionList().enqueue(object: retrofit2.Callback<InspectionList> {
-            override fun onResponse(
-                call: retrofit2.Call<InspectionList>,
-                response: Response<InspectionList>
-            ) {
-                response.body()?.inspection?.let { inspectionList.addAll(it) }
-                recylcerInspectionAdapter.notifyDataSetChanged()
-            }
-
-            override fun onFailure(call: retrofit2.Call<InspectionList>, t: Throwable) {
-                Log.e("Error",t.message.toString())
-            }
-
-        })
+//        retro.InspectionList().enqueue(object: retrofit2.Callback<InspectionList> {
+//            override fun onResponse(
+//                call: retrofit2.Call<InspectionList>,
+//                response: Response<InspectionList>
+//            ) {
+//                response.body()?.inspection?.let { inspectionList.addAll(it) }
+//                recylcerInspectionAdapter.notifyDataSetChanged()
+//            }
+//
+//            override fun onFailure(call: retrofit2.Call<InspectionList>, t: Throwable) {
+//                Log.e("Error",t.message.toString())
+//            }
+//
+//        })
 
         recylcerInspection.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL ,false)
         return view

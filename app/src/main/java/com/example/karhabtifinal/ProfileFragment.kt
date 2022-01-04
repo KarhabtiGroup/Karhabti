@@ -41,15 +41,15 @@ class ProfileFragment : Fragment() {
         }
 
 
-        val namex = getStringExtra(NAME)
-        val adressx = intent.getStringExtra(ADRESS)
-        val emailx = intent.getStringExtra(EMAIL)
-        val phoneNumberx = intent.getStringExtra(PHONENUMBER)
+//        val namex = getStringExtra(NAME)
+//        val adressx = intent.getStringExtra(ADRESS)
+//        val emailx = intent.getStringExtra(EMAIL)
+//        val phoneNumberx = intent.getStringExtra(PHONENUMBER)
 
-        usernom.text = "$namex"
-        useremail.text = "$adressx"
-        usernumero.text = "$emailx"
-        userdate.text = "$phoneNumberx"
+//        usernom.text = "$namex"
+//        useremail.text = "$adressx"
+//        usernumero.text = "$emailx"
+//        userdate.text = "$phoneNumberx"
         return binding.root
 
     }
