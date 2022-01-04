@@ -1,8 +1,8 @@
 package com.example.karhabtifinal.network
 
-import com.example.karhabtifinal.data.AnnonceList
-import com.example.karhabtifinal.data.MecanicienList
-import com.example.karhabtifinal.data.User
+import com.example.karhabtifinal.data.Annonce.AnnonceList
+import com.example.karhabtifinal.data.Mecanicien.MecanicienList
+import com.example.karhabtifinal.data.Utilisateur.User
 import com.google.gson.JsonObject
 import retrofit2.Call
 import retrofit2.http.Body

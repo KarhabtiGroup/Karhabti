@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
-import com.example.karhabtifinal.Accounts.ChoisirLoginSignup
+import com.example.karhabtifinal.AccountsUtilisateurs.ChoisirLoginSignup
 
 
 class SplashScreenActivity : AppCompatActivity() {

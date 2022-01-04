@@ -13,13 +13,13 @@
         android:theme="@style/Theme.KarhabtiFinal"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".Accounts.Signup"
+            android:name=".AccountsUtilisateurs.Signup"
             android:exported="true" />
         <activity
-            android:name=".Accounts.Login"
+            android:name=".AccountsUtilisateurs.Login"
             android:exported="true" />
         <activity
-            android:name=".Accounts.ChoisirLoginSignup"
+            android:name=".AccountsUtilisateurs.ChoisirLoginSignup"
             android:exported="true" />
         <activity
             android:name=".MainActivity"

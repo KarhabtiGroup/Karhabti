@@ -7,7 +7,7 @@
     android:backgroundTint="#C3C3C3"
     android:clickable="true"
 
-    tools:context=".DetailsFragment"
+    tools:context=".ActionsAnnonceMecanicienInspection.Annonce.DetailsFragment"
     android:focusable="true">
     <include
         android:id="@+id/includes"
