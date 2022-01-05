@@ -8,6 +8,7 @@ import com.example.karhabtifinal.R
 
 
 class MecanicienViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    val pic: ImageView
 
     val name: TextView
     val adress: TextView = itemView.findViewById<TextView>(R.id.adress)
@@ -15,7 +16,7 @@ class MecanicienViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
 
     init {
-
+        pic = itemView.findViewById<ImageView>(R.id.shop2)
         name = itemView.findViewById<TextView>(R.id.name)
 
     }
