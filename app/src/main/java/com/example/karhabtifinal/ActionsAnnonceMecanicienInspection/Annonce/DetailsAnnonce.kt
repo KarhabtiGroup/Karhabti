@@ -32,7 +32,16 @@ class DetailsAnnonce :AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_details_annonce)
 
-        image.setImageResource(intent.getIntExtra(PIC, 0))
+       //image.setImageResource(intent.getIntExtra(PICTURE, 0))
+
+        image = findViewById(R.id.PICDET)
+        titre = findViewById(R.id.textTitle)
+        marque = findViewById(R.id.textMarque)
+        prix = findViewById(R.id.textPrix)
+        date = findViewById(R.id.textDate)
+        gouvernorat = findViewById(R.id.textGouvernorat)
+        delegation = findViewById(R.id.textDELEGATION)
+        description = findViewById(R.id.textDescription)
 
         val imagex = intent.getStringExtra(PICTURE)
         val titrex = intent.getStringExtra(TITRE)

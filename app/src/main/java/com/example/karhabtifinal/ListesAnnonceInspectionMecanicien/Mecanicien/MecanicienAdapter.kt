@@ -49,7 +49,7 @@ class MecanicienAdapter(val MecanicienList: MutableList<Mecanicien>, val context
             val intent = Intent(holder.itemView.context, MecanicienDetail::class.java)
             intent.apply {
 
-                putExtra(PIC, image)
+               // putExtra(PIC, image)
                 putExtra(NAME, name)
                 putExtra(ADRESS, adress)
                 putExtra(EMAIL, email)

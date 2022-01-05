@@ -14,7 +14,7 @@
 
         <!-- Media -->
         <ImageView
-            android:id="@+id/pic2"
+            android:id="@+id/pic22"
             android:layout_width="363dp"
             android:layout_height="223dp"
             android:layout_gravity="center"
