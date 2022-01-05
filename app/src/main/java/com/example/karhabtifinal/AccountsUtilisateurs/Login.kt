@@ -7,6 +7,8 @@ import android.util.Log
 import android.widget.Toast
 import com.example.karhabtifinal.R
 import com.example.karhabtifinal.MainActivity
+import com.example.karhabtifinal.MainActivityMecanicien
+import com.example.karhabtifinal.data.Utilisateur.User
 import com.example.karhabtifinal.network.Retro
 import com.example.karhabtifinal.network.UserApi
 import com.google.gson.JsonObject
@@ -55,7 +57,15 @@ class Login : AppCompatActivity() {
         retro.login(gsonObject1).enqueue(object : Callback<JsonObject> {
             override fun onResponse(call: Call<JsonObject>, response: Response<JsonObject>) {
                 if (response.code() == 200) {
-                    initgo()
+                    val role = response.body()?.get("role").toString()
+                    if (role == "\"mecanicien\"") {
+                        navigate()
+
+                    }
+                    //else if (!role == "\"mecanicien\"") {
+                    else if (!role.equals( "\"mecanicien\"")) {
+                        navigate2()
+                    }
                     Toast.makeText(applicationContext, "go", Toast.LENGTH_SHORT).show()
                 } else {
                     Toast.makeText(applicationContext, "we can't sorry", Toast.LENGTH_SHORT).show()
@@ -69,10 +79,23 @@ class Login : AppCompatActivity() {
     }
 
 
-    fun initgo() {
+    fun navigate(){
+
         val intent = Intent(this, MainActivity::class.java).apply { }
         startActivity(intent)
+
     }
+    fun navigate2(){
+
+        val intent = Intent(this, MainActivityMecanicien::class.java).apply { }
+        startActivity(intent)
+    }
+
+
+    fun initgo() {
+
+    }
+
 }
 
 

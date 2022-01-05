@@ -14,6 +14,9 @@
         android:theme="@style/Theme.KarhabtiFinal"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".MainActivityMecanicien"
+            android:exported="true" />
+        <activity
             android:name=".ActionsAnnonceMecanicienInspection.Inspection.DetailInspection"
             android:exported="true" />
         <activity

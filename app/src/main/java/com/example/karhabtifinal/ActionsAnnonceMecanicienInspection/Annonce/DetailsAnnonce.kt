@@ -28,11 +28,11 @@ class DetailsAnnonce :AppCompatActivity() {
     lateinit var description: TextView
 
     @RequiresApi(Build.VERSION_CODES.O)
-    override fun onCreate(savedInstanceState: Bundle?) {
+     fun onCreate(savedInstanceState: Bundle?,context: Context) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_details_annonce)
 
-       //image.setImageResource(intent.getIntExtra(PICTURE, 0))
+       //
 
         image = findViewById(R.id.PICDET)
         titre = findViewById(R.id.textTitle)
@@ -61,8 +61,8 @@ class DetailsAnnonce :AppCompatActivity() {
         delegation.text = "$delegationx"
         description.text = "$descriptionx"
         val myByteArray = Base64.getDecoder().decode(imagex)
-        loadImageToMovie(getApplicationContext(), myByteArray, image, null)
-
+        loadImageToMovie(context, myByteArray, image, null)
+        //image.setImageResource(intent.getIntExtra(PICTURE, 0))
 
     }
     fun loadImageToMovie(

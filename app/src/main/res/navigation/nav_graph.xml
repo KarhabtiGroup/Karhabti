@@ -23,6 +23,9 @@
         <action
             android:id="@+id/ajouterAnnonce_to_annonces"
             app:destination="@id/annoncesFragment" />
+        <action
+            android:id="@+id/action_navigation_Annonce_to_mecanicienFragment"
+            app:destination="@id/navigation_mecanicien" />
     </fragment>
 
 
@@ -41,17 +44,30 @@
         android:label="fragment_modifierprofile"
         tools:layout="@layout/fragment_modifierprofile" />
     <fragment
-        android:id="@+id/detailsFragment"
-        android:name="com.example.karhabtifinal.ActionsAnnonceMecanicienInspection.Annonce.DetailsFragment"
-        android:label="fragment_details"
-        tools:layout="@layout/fragment_details" />
-    <fragment
         android:id="@+id/annoncesFragment"
         android:name="com.example.karhabtifinal.ActionsAnnonceMecanicienInspection.Annonce.AnnoncesFragment"
         android:label="fragment_annonces"
-        tools:layout="@layout/fragment_annonces" >
+        tools:layout="@layout/fragment_annonces" />
+    <fragment
+        android:id="@+id/navigation_mecanicien"
+        android:name="com.example.karhabtifinal.ActionsAnnonceMecanicienInspection.Mecanicien.MecanicienFragment"
+        android:label="fragment_mecanicien"
+        tools:layout="@layout/fragment_mecanicien" >
         <action
-            android:id="@+id/annonces_to_details"
-            app:destination="@id/detailsFragment" />
+            android:id="@+id/action_mecanicienFragment_to_inspectionFragment"
+            app:destination="@id/inspectionFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/inspectionFragment"
+        android:name="com.example.karhabtifinal.ActionsAnnonceMecanicienInspection.Inspection.InspectionFragment"
+        android:label="fragment_inspection"
+        tools:layout="@layout/fragment_inspection" >
+        <action
+            android:id="@+id/action_inspectionFragment_to_detailInspection"
+            app:destination="@id/navigation_Inspection" />
+    </fragment>
+    <activity
+        android:id="@+id/navigation_Inspection"
+        android:name="com.example.karhabtifinal.ActionsAnnonceMecanicienInspection.Inspection.DetailInspection"
+        android:label="DetailInspection" />
 </navigation>

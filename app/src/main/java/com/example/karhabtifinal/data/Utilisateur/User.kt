@@ -14,6 +14,8 @@ data class User(
 
     val birthDate: String,
 
-    val image: String
+    val image: String,
+
+    val role:String,
 
 )

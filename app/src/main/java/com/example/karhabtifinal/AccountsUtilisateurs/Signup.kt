@@ -183,6 +183,7 @@ class Signup : AppCompatActivity() {
 
         retro.register(gsonObject1).enqueue(object : Callback<JsonObject> {
             override fun onResponse(call: Call<JsonObject>, response: Response<JsonObject>) {
+
                 Toast.makeText(applicationContext, "Success", Toast.LENGTH_LONG).show()
                 initgo()
             }
