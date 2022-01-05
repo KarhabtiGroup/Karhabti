@@ -3,10 +3,11 @@ const Schema = mongoose.Schema;
 
 
 const mecanicienSchema = new Schema({
+  
     name: {
         type: String,
     },
-    Adress: {
+    adress: {
         type: String,
     },
     email: {
@@ -16,9 +17,16 @@ const mecanicienSchema = new Schema({
         type: String,
     },
     birthDate: {
-        type: Date,
+        type: String,
     },
+
+    image: { 
+        type: String, required: true 
+    
+    },
+
 }, { timestamps: true});
+
 
 const Mecanicien = mongoose.model('Mecanicien', mecanicienSchema);
 

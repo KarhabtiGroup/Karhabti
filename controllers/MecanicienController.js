@@ -2,23 +2,15 @@ const Mecanicien = require('../models/Mecanicien')
 const index=(req, res, next) => 
 {
     Mecanicien.find()
-    .then(reponse =>{
-        res.json({
-        response
-         })
-    })
- .catch(error=>{
-     res.json({
-        error
-    })
- })   
+    .then((mecanicien) =>{res.json({mecanicien})})
+    .catch(error=>{res.json({error})})      
 }
 const show = (req, res, next) => {
     let mecanicienID = req.body.mecanicienID
     Mecanicien.findById(mecanicienID)
-    .then(reponse => {
+    .then(response => {
         res.json({
-            reponse
+            response
         })
     })
     .catch(error => {
@@ -30,13 +22,21 @@ const show = (req, res, next) => {
 
 
 const store = (req, res, next) => {
-
-    let Mecanicien= new Mecanicien({
+    
+console.log(req.file);
+    let mecanicien= new Mecanicien({
         name:req.body.name,
         email:req.body.email,
+        adress:req.body.adress,
         phoneNumber:req.body.phoneNumber,
-        birthDate:req.body.birthDate
-    })
+        birthDate:req.body.birthDate,
+        image: req.file.path
+
+    });
+
+        
+    console.log(mecanicien)
+
     mecanicien.save()
     .then(response => {
         res.json({
@@ -49,7 +49,6 @@ const store = (req, res, next) => {
     })
 })
 }
-
 
 //update an Mecanicien
 const update =(req, res, next)=>

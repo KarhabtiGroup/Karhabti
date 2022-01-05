@@ -1,25 +1,16 @@
-const Utilisateur = require('../models/Utilisateur')
+const Inspection = require('../models/Inspection')
 const index=(req, res, next) => 
 {
-    Utilisateur.find()
-    .then(reponse =>{
-        res.json({
-        response
-         })
-    })
- .catch(error=>{
-     res.json({
-        error
-    })
- })   
+    Inspection.find()
+    .then((inspection) =>{res.json({inspection})})
+    .catch(error=>{res.json({error})})      
 }
-
 const show = (req, res, next) => {
-    let utilisateurID = req.body.utilisateurID
-     Utilisateur.findById(utilisateurID)
-    .then(reponse => {
+    let inspectionID = req.body.inspectionID
+    Inspection.findById(inspectionID)
+    .then(response => {
         res.json({
-            reponse
+            response
         })
     })
     .catch(error => {
@@ -31,17 +22,28 @@ const show = (req, res, next) => {
 
 
 const store = (req, res, next) => {
+    
 
-    let utilisateur= new Utilisateur({
+    let inspection= new Inspection({
         name:req.body.name,
-        email:req.body.email,
-        phoneNumber:req.body.phoneNumber,
-        birthDate:req.body.birthDate
-    })
-    utilisateur.save()
+        mecanicien:req.body.mecanicien,
+        annonce:req.body.annonce,
+        utilisateur:req.body.utilisateur,
+        moteur:req.body.moteur,
+        transmission:req.body.transmission,
+        roues:req.body.roues,
+        historique:req.body.historique,
+        date:req.body.date
+
+    });
+
+        
+    console.log(inspection)
+
+    inspection.save()
     .then(response => {
         res.json({
-            message:'Employee Added Sucessfull!'
+            message:'Inspection Added Sucessfull!'
         })
     })
 .catch(eroor => {
@@ -51,21 +53,25 @@ const store = (req, res, next) => {
 })
 }
 
-
-//update an utilisateur
+//update an Inspection
 const update =(req, res, next)=>
 {
-    let utilisateurID=req.body.utilisateurID
+    let inspectionID=req.body.inspectionID
     let updateData={
         name:req.body.name,
-        email:req.body.email,
-        phoneNumber:req.body.phoneNumber,
-        birthDate:req.body.birthDate
+        mecanicien:req.body.mecanicien,
+        annonce:req.body.annonce,
+        utilisateur:req.body.utilisateur,
+        moteur:req.body.moteur,
+        transmission:req.body.transmission,
+        roues:req.body.roues,
+        historique:req.body.historique,
+        date:req.body.date
     }
-    Utilisateur.findByIdAndUpdate(utilisateurID, {$set:updateData})
+    Inspection.findByIdAndUpdate(inspectionID, {$set:updateData})
     .then(()=>{
         res.json( {
-            message:'Utilisateur updated successfully!'
+            message:'Inspection updated successfully!'
         })
     })
 .catch(error =>{
@@ -76,11 +82,11 @@ const update =(req, res, next)=>
 }
 
 
-//delete an utilisateur
+//delete an Inspection
 
 const destory=(req,res,next) =>{
-    let utilisateurID= req.body.utilisateurID
-    Utilisateur.findByIdAndRemove(utilisateurID)
+    let inspectionID= req.body.inspectionID
+    Inspection.findByIdAndRemove(inspectionID)
     .then(()=>{
         req.json({
             message: 'an error Occured!'

@@ -2,24 +2,34 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 
-const utilisateurSchema = new Schema({
-    name: {
+const inspectionSchema = new Schema({
+   
+    mecanicien: {
         type: String,
     },
-    passwordHash: {
+    annonce: {
         type: String,
     },
-    email: {
+    utilisateur: {
         type: String,
     },
-    phoneNumber: {
+    moteur: {
         type: String,
     },
-    birthDate: {
-        type: Date,
+    transmission: {
+        type: String,
+    },
+    roues: {
+        type: String,
+    },
+    historique: {
+        type: String,
+    },
+    date: {
+        type: String,
     },
 }, { timestamps: true});
 
-const Utilisateur = mongoose.model('Utilisateur', utilisateurSchema);
+const Inspection = mongoose.model('Inspection', inspectionSchema);
 
-module.exports = Utilisateur
+module.exports = Inspection

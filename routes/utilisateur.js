@@ -3,7 +3,7 @@ const router  = express.Router()
 
 const UtilisateurController = require('../controllers/UtilisateurController')
 
-router.get('/',UtilisateurController.index)
+router.get('/index',UtilisateurController.index)
 router.post('/show',UtilisateurController.show)
 router.get('/',UtilisateurController.index)
 router.post('/store',UtilisateurController.store)

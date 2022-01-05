@@ -3,21 +3,30 @@ const Schema = mongoose.Schema;
 
 
 const annonceSchema = new Schema({
-    Title: {
+    titre: {
         type: String,
     },
-    Description: {
+    marque: {
         type: String,
     },
-    email: {
+    prix: {
         type: String,
     },
-    phoneNumber: {
-        type: String,
-    },
-    birthDate: {
+    date: {
         type: Date,
     },
+    gouvernorat: {
+        type: String,
+    },
+    delegation: {
+        type: String,
+    },
+    description: {
+        type: String,
+    },
+   
+  
+   
 }, { timestamps: true});
 
 const Annonce = mongoose.model('Annonce', annonceSchema);

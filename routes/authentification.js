@@ -15,12 +15,18 @@ router.route('/register').post( async (req, res) => {
             const email = req.body.email;
             const password = req.body.password;
             const confirmPassword = req.body.confirmPassword;
+            const phoneNumber = req.body.phoneNumber;
+            const birthDate = req.body.birthDate;
+
+         
 
             const error = {
                 name:"",
                 email:"",
                 password:"",
                 confirmPassword: "",
+                phoneNumber: "",
+                birthDate: "",
                 e:false
             };
 
@@ -78,10 +84,10 @@ router.route('/register').post( async (req, res) => {
             const passwordHash = await bcrypt.hash(password, salt);
 
             //save new user to db
-            const newUser = await new Utilisateur({name, email, passwordHash});
+            const newUser = await new Utilisateur({name, email, passwordHash,phoneNumber,birthDate});
             const savedUser = await newUser.save();
 
-            res.send("req.statusCode+");
+            res.status(200).send(newUser);
 
 
         } catch (err) {
@@ -91,8 +97,59 @@ router.route('/register').post( async (req, res) => {
 
     }
 );
+router.route('/login').post( async (req, res) => {
+    try{
 
+        const email = req.body.email;
+        const passwordEntered = req.body.password;
 
+        console.log(email)
+        console.log(passwordEntered)
+        // validate
+
+        if (!email || !passwordEntered)
+            return res
+                .status(400)
+                .json({ errorMessage: "Please enter all required fields." });
+
+        const existingUser = await Utilisateur.findOne({ email }).select("+password");
+        if (!existingUser)
+            return res.status(401).json({ errorMessage: "Wrong email or password." });
+
+            const passwordCorrect = await bcrypt.compare(
+                passwordEntered,
+                existingUser.passwordHash
+            );
+        console.log(passwordCorrect)
+        if (!passwordCorrect) {
+            console.log("hey");
+            return res.status(401).json({ errorMessage: "Wrong email or password." });
+
+        }
+        require('dotenv').config();
+
+        console.log(process.env.JWT_SECRET)
+        //sign the token
+        const token = jwt.sign(
+            {
+                user: existingUser._id,
+            },
+            process.env.JWT_SECRET
+        );
+
+        //send the token in a HTTP-only cookie
+        res.cookie("token", token, {
+                httpOnly: true,
+                secure: true,
+                sameSite: "none",
+            }).json(existingUser).send();
+
+    }catch (err) {
+        console.error(err);
+        res.status(500).send();
+    }
+});
+/*
 router.route('/login').post( async (req, res) => {
     try{
 
@@ -145,7 +202,7 @@ router.route('/login').post( async (req, res) => {
         res.status(500).send();
     }
 });
-
+*/
 router.route('/logout').get(auth, (req, res) => {
     //console.log("logging out");
     res

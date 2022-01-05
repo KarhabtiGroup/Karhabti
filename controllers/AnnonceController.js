@@ -1,25 +1,18 @@
-const Utilisateur = require('../models/Utilisateur')
+const Annonce = require('../models/Annonce')
+
 const index=(req, res, next) => 
 {
-    Utilisateur.find()
-    .then(reponse =>{
-        res.json({
-        response
-         })
-    })
- .catch(error=>{
-     res.json({
-        error
-    })
- })   
+    Annonce.find()
+    .then((annonce) =>{res.json({annonce})})
+    .catch(error=>{res.json({error})})      
 }
 
 const show = (req, res, next) => {
-    let utilisateurID = req.body.utilisateurID
-     Utilisateur.findById(utilisateurID)
-    .then(reponse => {
+    let annonceID = req.body.annonceID
+    Annonce.findById(annonceID)
+    .then(response => {
         res.json({
-            reponse
+            response
         })
     })
     .catch(error => {
@@ -30,18 +23,29 @@ const show = (req, res, next) => {
 }
 
 
-const store = (req, res, next) => {
 
-    let utilisateur= new Utilisateur({
-        name:req.body.name,
-        email:req.body.email,
-        phoneNumber:req.body.phoneNumber,
-        birthDate:req.body.birthDate
+
+const store = (req, res, next) => {
+    
+
+    let annonce= new Annonce({
+        titre:req.body.titre,
+        marque:req.body.marque,
+        prix:req.body.prix,
+        date:req.body.date,
+        gouvernorat:req.body.gouvernorat,
+        delegation:req.body.delegation,
+        description:req.body.description
+
     })
-    utilisateur.save()
+
+        
+    console.log(annonce)
+
+    annonce.save()
     .then(response => {
         res.json({
-            message:'Employee Added Sucessfull!'
+            message:'Annonce Added Sucessfull!'
         })
     })
 .catch(eroor => {
@@ -52,20 +56,27 @@ const store = (req, res, next) => {
 }
 
 
-//update an utilisateur
+
+
+
+
+//update an Annonce
 const update =(req, res, next)=>
 {
-    let utilisateurID=req.body.utilisateurID
+    let annonceID=req.body.annonceID
     let updateData={
-        name:req.body.name,
-        email:req.body.email,
-        phoneNumber:req.body.phoneNumber,
-        birthDate:req.body.birthDate
+        titre:req.body.titre,
+        marque:req.body.marque,
+        prix:req.body.prix,
+        date:req.body.date,
+        gouvernorat:req.body.gouvernorat,
+        delegation:req.body.delegation,
+        description:req.body.description
     }
-    Utilisateur.findByIdAndUpdate(utilisateurID, {$set:updateData})
+    Annonce.findByIdAndUpdate(annonceID, {$set:updateData})
     .then(()=>{
         res.json( {
-            message:'Utilisateur updated successfully!'
+            message:'Annonce updated successfully!'
         })
     })
 .catch(error =>{
@@ -76,11 +87,11 @@ const update =(req, res, next)=>
 }
 
 
-//delete an utilisateur
+//delete an Annonce
 
 const destory=(req,res,next) =>{
-    let utilisateurID= req.body.utilisateurID
-    Utilisateur.findByIdAndRemove(utilisateurID)
+    let annonceID= req.body.annonceID
+    Annonce.findByIdAndRemove(annonceID)
     .then(()=>{
         req.json({
             message: 'an error Occured!'
