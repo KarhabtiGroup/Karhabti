@@ -1,12 +1,14 @@
 package com.example.karhabtifinal.data.Annonce
 
 
-//const val PICTURE = "PICTURE"
-//const val TITRE = "TITRE"
-//const val MARQUE = "MARQUE"
-//const val DESCRIPTION = "DESCRIPTION"
-//const val GOUVERNORAT = "GOUVERNORAT"
-//const val DELEGATION = "DELEGATION"
+const val PICTURE = "PICTURE"
+const val TITRE = "TITRE"
+const val MARQUE = "MARQUE"
+const val DESCRIPTION = "DESCRIPTION"
+const val DATE = "DATE"
+const val PRIX = "PRIX"
+const val GOUVERNORAT = "GOUVERNORAT"
+const val DELEGATION = "DELEGATION"
 
 data class Annonce(
 
@@ -20,10 +22,12 @@ data class Annonce(
 
     val date: String,
 
-    val description: String,
-
     val gouvernorat: String,
 
-    val delegation: String
+    val delegation: String,
+
+    val description: String
+
+
 
 )

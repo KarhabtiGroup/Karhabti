@@ -13,7 +13,7 @@ import com.example.karhabtifinal.network.Retro
 import com.example.karhabtifinal.network.UserApi
 import com.google.gson.JsonObject
 import com.google.gson.JsonParser
-import kotlinx.android.synthetic.main.fragment_mecanicien_detail.*
+import kotlinx.android.synthetic.main.activity_mecanicien_detail.*
 import org.json.JSONObject
 import retrofit2.Call
 import retrofit2.Callback

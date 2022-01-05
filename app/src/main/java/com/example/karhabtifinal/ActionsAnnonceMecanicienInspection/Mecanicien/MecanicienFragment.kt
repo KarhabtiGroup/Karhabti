@@ -39,7 +39,7 @@ class MecanicienFragment : Fragment() {
 
 
 
-        recylcerMecanicienAdapter = MecanicienAdapter(mecanicienList)
+        recylcerMecanicienAdapter = MecanicienAdapter(mecanicienList,requireContext())
 
         recylcerMecanicien.adapter = recylcerMecanicienAdapter
 

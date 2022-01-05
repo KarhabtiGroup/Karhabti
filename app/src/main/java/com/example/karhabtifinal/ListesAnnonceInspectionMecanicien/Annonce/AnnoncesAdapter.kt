@@ -23,7 +23,7 @@ import com.example.karhabtifinal.data.Mecanicien.PHONENUMBER
 import java.util.*
 
 
-class AnnonceAdapter(val AnnonceList: MutableList<Annonce>, val context: Context) :
+class AnnoncesAdapter(val AnnonceList: MutableList<Annonce>, val context: Context) :
     RecyclerView.Adapter<AnnonceViewHolder>() {
     private val placeholder: Drawable? = ContextCompat.getDrawable(context, R.drawable.splash1)
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AnnonceViewHolder {
